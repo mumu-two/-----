@@ -1,0 +1,31 @@
+<!doctype html>
+<html>
+<head>
+<script language="javascript">
+var i=0;
+function
+ move( )
+{
+document.getElementById("Layer1").style.left= Math.random()*500;
+document.getElementById("Layer1").style.top= Math.random()*500;
+if(i==0){
+setTimeout("move()",1000);
+}
+}
+function stop( ){
+	i=1;
+}
+function continue(){
+	i=0;
+}
+</script>
+</head>
+<body onload="move()">
+
+<div id="Layer1" style="position:absolute; left:14px; top:44px; width:150px; height:102px; z-index:1">
+ 
+ <img src="15.jpg" width="88" height="83" onMouseMove="stop()" onMouseOut="continue()" alt=""/> </div>
+
+
+</body>
+</html>
